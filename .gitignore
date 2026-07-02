@@ -1,0 +1,10 @@
+# Private source material — never publish (contains phone/email)
+ABa_CV_Data.pdf
+*.pdf
+
+# Brainstorming companion working files
+.superpowers/
+
+# Local verification artifacts
+.playwright-mcp/
+*.png

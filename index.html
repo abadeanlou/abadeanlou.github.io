@@ -3,76 +3,213 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amirhesam Badeanlou</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Georgia, 'Times New Roman', serif;
-      background: #faf8f5;
-      color: #2b2b2b;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-    }
-
-    main {
-      max-width: 34rem;
-    }
-
-    h1 {
-      font-size: 2.4rem;
-      font-weight: normal;
-      margin-bottom: 0.5rem;
-    }
-
-    .subtitle {
-      font-family: Verdana, Geneva, sans-serif;
-      font-size: 0.85rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #8a6d3b;
-      margin-bottom: 1.5rem;
-    }
-
-    p {
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
-    }
-
-    .links a {
-      font-family: Verdana, Geneva, sans-serif;
-      font-size: 0.85rem;
-      color: #2b2b2b;
-      text-decoration: none;
-      border-bottom: 1px solid #8a6d3b;
-      padding-bottom: 2px;
-      margin-right: 1.5rem;
-    }
-
-    .links a:hover {
-      color: #8a6d3b;
-    }
-  </style>
+  <meta name="description" content="Amirhesam Badeanlou — Data Scientist & Engineer in Milan. Machine learning, Python, and geospatial data for urban mobility.">
+  <title>Amirhesam Badeanlou — Data Scientist &amp; Engineer</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%238a6d3b'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' fill='%23faf8f5' text-anchor='middle'%3EAB%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
-    <h1>Amirhesam Badeanlou</h1>
-    <p class="subtitle">Transport Modelling &middot; citiEU</p>
-    <p>
-      Hello! This is my first GitHub Pages site &mdash; a small experiment
-      to see how pushing a file to a repository turns into a live web page.
-    </p>
-    <nav class="links">
-      <a href="https://github.com/abadeanlou">GitHub</a>
-      <a href="https://www.citieu.it">citiEU</a>
-    </nav>
-  </main>
+  <div class="page">
+
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <h1>Amirhesam<br>Badeanlou</h1>
+        <p class="tagline">Data Scientist &amp; Engineer</p>
+        <p class="tagline-sub">ML, Python &amp; Geospatial Data</p>
+        <p class="location">Milan, Italy</p>
+
+        <nav class="site-nav" aria-label="Section navigation">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#publications" class="nav-link">Publications</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#education" class="nav-link">Education</a>
+        </nav>
+
+        <div class="social">
+          <a href="https://github.com/abadeanlou" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/abadeanlou/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://scholar.google.com/citations?hl=en&amp;user=wJTLpQIAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+        </div>
+
+        <p class="languages">English · Italian · Persian</p>
+      </div>
+    </aside>
+
+    <main class="content">
+
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          I'm a data scientist and engineer based in Milan, working where machine
+          learning, geospatial data, and urban mobility meet. At CitiEU I design and
+          build data platforms that turn city-scale movement data into models, maps,
+          and decisions &mdash; from real-time traffic ingestion and ML travel-time
+          inference to the transport models behind them.
+        </p>
+        <p>
+          Before that, I did research at Institut Polytechnique de Paris on public
+          transit equity, published as first author at hEART 2022 and TRB 2023.
+        </p>
+      </section>
+
+      <section id="experience">
+        <h2>Experience</h2>
+
+        <article class="job">
+          <header>
+            <h3>Transportation Data &amp; Modelling Specialist</h3>
+            <p class="job-meta">CitiEU — CitiME · Milan, Italy · <span class="dates">Mar 2023 – Present</span></p>
+          </header>
+          <ul>
+            <li>Designed and built <strong>IntelligentMobilityHub</strong>, an internal route-monitoring
+              platform: Express.js backend, FastAPI/LightGBM ML inference sidecar, PostgreSQL with
+              monthly time-series partitioning, MapLibre GL frontend, and Anthropic API integration
+              for AI-generated traffic reports.</li>
+            <li>Architected its real-time ingestion layer, pulling TomTom MOVE traffic and incident
+              feeds into PostgreSQL via REST APIs and sustaining continuous high-volume capture
+              across multiple enterprise clients.</li>
+            <li>Built Python automation for ETL, model execution, and CubeConvert-driven
+              SQLite/GDB/NET conversions, replacing previously manual steps in the client
+              model-delivery workflow.</li>
+            <li>Developed a bash orchestration framework running multi-agent audit pipelines
+              (Claude + Codex) across 8+ domain roles per script for code review, UI/UX,
+              performance, and feature audits.</li>
+            <li>Ported legacy Voyager transport-modelling scripts to CubePy and rebuilt the
+              surrounding Python automation, cutting end-to-end model runtime by <strong>40%</strong> on
+              the Abu Dhabi Mobility model and clearing an ArcGIS Engine deprecation blocker.</li>
+            <li>Delivered training to <strong>50+ modellers</strong> across the client's modelling group on
+              the migrated stack, with architecture docs, user guides, and methodology reports.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <header>
+            <h3>Research Assistant (Data Science)</h3>
+            <p class="job-meta">Institut Polytechnique de Paris — LINCS Lab · Paris, France · <span class="dates">Nov 2021 – Nov 2022</span></p>
+          </header>
+          <ul>
+            <li>Built a Python pipeline ingesting multi-city GTFS feeds into MongoDB and computing
+              accessibility metrics (Lorenz curves, Gini indices) entirely from open data.</li>
+            <li>Contributed to the French ANR MuTAS project (ANR-21-CE22-0025-01); output published
+              at hEART 2022 and TRB 2023 as first author.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project-grid">
+          <article class="project">
+            <h3>IntelligentMobilityHub</h3>
+            <p class="project-org">Full-stack route monitoring · CitiEU</p>
+            <p>Vanilla-JS SPA and Express.js API with a FastAPI/LightGBM sidecar for travel-time
+              inference. Real-time TomTom MOVE ingestion into partitioned PostgreSQL, MapLibre GL
+              live route and incident layers, and Anthropic-API-generated incident and trend reports.</p>
+            <p class="tags"><span>Node.js</span><span>FastAPI</span><span>LightGBM</span><span>PostgreSQL</span><span>MapLibre GL</span></p>
+          </article>
+
+          <article class="project">
+            <h3>Abu Dhabi Mobility Model</h3>
+            <p class="project-org">Migration &amp; performance · CitiEU</p>
+            <p>Ported Voyager scripts to CubePy and resolved an ArcGIS Engine dependency blocking
+              the model on newer environments; cut end-to-end runtime by 40% and trained 50+
+              modellers on the migrated stack.</p>
+            <p class="tags"><span>CubePy</span><span>Cube Voyager</span><span>Python</span></p>
+          </article>
+
+          <article class="project">
+            <h3>Public Transit Equity Analysis</h3>
+            <p class="project-org">Research · IP Paris</p>
+            <p>Stored and queried multi-city GTFS feeds in MongoDB; computed Gini- and Lorenz-based
+              equity scores at the transit-line level using open data only. Output: two first-author
+              conference papers.</p>
+            <p class="tags"><span>Python</span><span>MongoDB</span><span>GTFS</span></p>
+          </article>
+        </div>
+      </section>
+
+      <section id="publications">
+        <h2>Publications</h2>
+
+        <article class="publication">
+          <h3><a href="https://arxiv.org/abs/2206.09037" target="_blank" rel="noopener">Assessing Transportation Accessibility Equity via Open Data</a></h3>
+          <p class="pub-meta"><strong>Badeanlou, A.</strong>, Araldo, A., Diana, M. · hEART Conference 2022</p>
+          <p>A fully automated methodology to measure transportation accessibility inequity using
+            Lorenz curves and Gini indices, relying solely on open data — demonstrated on four
+            cities and compared with existing approaches.</p>
+        </article>
+
+        <article class="publication">
+          <h3><a href="https://arxiv.org/abs/2210.00128" target="_blank" rel="noopener">Equity Scores for Public Transit Lines from Open Data and Accessibility Measures</a></h3>
+          <p class="pub-meta"><strong>Badeanlou, A.</strong>, Araldo, A., Diana, M., Gauthier, V. · Transportation Research Board (TRB) 2023</p>
+          <p>An equity scoring system for public transit lines aimed at reducing car dependency in
+            underserved areas — measuring and improving accessibility equity across seven cities
+            from open data, to guide large-scale transit optimization.</p>
+        </article>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+
+        <dl class="skills">
+          <div class="skill-group">
+            <dt>Programming &amp; Data</dt>
+            <dd><span>Python</span><span>pandas</span><span>NumPy</span><span>GeoPandas</span><span>SQL</span><span>JavaScript</span><span>Node.js</span><span>Bash</span></dd>
+          </div>
+          <div class="skill-group">
+            <dt>Machine Learning &amp; AI</dt>
+            <dd><span>LightGBM</span><span>Feature engineering</span><span>Model evaluation</span><span>Anthropic API</span><span>Claude Code / MCP</span></dd>
+          </div>
+          <div class="skill-group">
+            <dt>Data Pipelines</dt>
+            <dd><span>REST APIs</span><span>Real-time ingestion</span><span>ETL/ELT</span><span>Async processing</span></dd>
+          </div>
+          <div class="skill-group">
+            <dt>Databases</dt>
+            <dd><span>PostgreSQL</span><span>MongoDB</span><span>SQLite</span><span>SQL Server</span></dd>
+          </div>
+          <div class="skill-group">
+            <dt>Geospatial &amp; Visualisation</dt>
+            <dd><span>MapLibre GL</span><span>QGIS</span><span>ArcGIS</span><span>GTFS</span><span>Dashboards</span></dd>
+          </div>
+          <div class="skill-group">
+            <dt>Transport Modelling</dt>
+            <dd><span>OpenPaths CUBE</span><span>CubePy</span><span>Aimsun</span><span>LEGION</span><span>Four-step modelling</span></dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="education">
+        <h2>Education &amp; Honors</h2>
+
+        <article class="edu">
+          <h3>Politecnico di Torino</h3>
+          <p class="edu-meta">M.Sc. Civil Engineering — Infrastructures &amp; Transportation Systems · Turin, Italy · <span class="dates">2019 – 2022</span></p>
+        </article>
+
+        <article class="edu">
+          <h3>Sharif University of Technology</h3>
+          <p class="edu-meta">B.Sc. Civil Engineering · Tehran, Iran · <span class="dates">2015 – 2019</span></p>
+        </article>
+
+        <ul class="honors">
+          <li><strong>Rapid promotion</strong> — promoted to Abu Dhabi Mobility Transport Modeller within 12 months (typical track: 3 years).</li>
+          <li><strong>Full M.Sc. scholarship</strong> — awarded for the duration of the Politecnico di Torino programme.</li>
+          <li><strong>Research grants</strong> — funding secured from three independent sources for the Paris-based master's thesis.</li>
+          <li><strong>Conference presentation</strong> — presented first-author work at hEART 2022.</li>
+        </ul>
+      </section>
+
+      <footer>
+        <p>&copy; 2026 Amirhesam Badeanlou · Built with plain HTML &amp; CSS, hosted on GitHub Pages.</p>
+      </footer>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
