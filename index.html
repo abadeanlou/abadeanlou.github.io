@@ -47,9 +47,7 @@
       localStorage.getItem('theme') ||
       (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   </script>
-  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css"
-        integrity="sha384-uTttxo/aOKbdE5RlD/SPzSDoDmNvGlUYPjONi2MN/b7c9HPSvW07OIuyP7uL6jxK" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
   <div class="page">
@@ -100,11 +98,6 @@
           Before that, I did research at Institut Polytechnique de Paris on public
           transit equity, published as first author at hEART 2022 and TRB 2023.
         </p>
-
-        <div class="map-frame">
-          <div id="journey-map" role="img" aria-label="Map of the cities where I have studied, researched, and worked"></div>
-          <p class="map-caption">The journey so far — Tehran → Turin → Paris → Milan → Abu Dhabi. Click a marker.</p>
-        </div>
       </section>
 
       <section id="experience">
@@ -272,8 +265,6 @@
     </main>
   </div>
 
-  <script defer src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"
-          integrity="sha384-5+cfbwT0iiub6VsQAdn6yz16nr6sDiQoHx6tm4O8OVYXHYOxcffFmCJBL0dgdvGp" crossorigin="anonymous"></script>
-  <script defer src="script.js?v=3"></script>
+  <script defer src="script.js?v=4"></script>
 </body>
 </html>

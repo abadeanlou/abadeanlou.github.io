@@ -47,11 +47,10 @@ CV and portfolio, sourced from the CV PDF (kept private, gitignored).
   nav/theme-switch/map hidden, link URLs printed for publications and socials
 - **Certifications** subsection under Education & Honors; Coursera items link
   to public verification pages (Google Drive cert links deliberately excluded)
-- **Journey map**: MapLibre GL 5.24.0 (unpkg CDN, SRI-pinned) + OpenFreeMap
-  `positron` (keyless) in About; bronze markers Tehran→Turin→Paris→Milan→Abu
-  Dhabi with dashed journey line and popups; scroll-zoom off; frame hidden via
-  `.map-frame:not(.map-ready)` when JS/CDN unavailable; light map kept in dark
-  theme (framed-print look). No TomTom, no keys, no client data.
+- **Journey map**: built (MapLibre GL + OpenFreeMap positron, cities of the
+  user's story) but REMOVED same day at user request — user didn't like it.
+  The site is dependency-free again. Code exists in git history (commit
+  3fba729) if ever wanted back.
 
 ## Verification
 - Local browser check at desktop and mobile widths before pushing

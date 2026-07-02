@@ -196,51 +196,6 @@ h3 {
   margin-top: 1rem;
 }
 
-/* Journey map */
-
-.map-frame {
-  margin-top: 1.75rem;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  overflow: hidden;
-  background: var(--card);
-}
-
-#journey-map {
-  height: 320px;
-}
-
-/* Collapse the frame if the map never initializes (JS off, CDN blocked) */
-.map-frame:not(.map-ready) {
-  display: none;
-}
-
-.map-caption {
-  font-family: var(--sans);
-  font-size: 0.68rem;
-  color: var(--faint);
-  padding: 0.55rem 0.9rem;
-  border-top: 1px solid var(--border);
-}
-
-.journey-marker {
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  background: var(--accent);
-  border: 2px solid #ffffff;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-}
-
-.maplibregl-popup-content {
-  font-family: var(--sans);
-  font-size: 0.72rem;
-  line-height: 1.5;
-  color: #2b2b2b;
-  padding: 0.6rem 0.8rem;
-}
-
 /* Experience */
 
 .job {
@@ -493,7 +448,6 @@ footer {
 
   .theme-switch,
   .site-nav,
-  .map-frame,
   footer {
     display: none !important;
   }
