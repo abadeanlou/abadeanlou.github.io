@@ -10,6 +10,18 @@
   --border: #e8e2d9;
   --serif: Georgia, 'Times New Roman', serif;
   --sans: Verdana, Geneva, sans-serif;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --bg: #201d19;
+  --card: #2a2622;
+  --ink: #e8e2d9;
+  --muted: #a89f92;
+  --faint: #7d766c;
+  --accent: #c9a05e;
+  --border: #3a352e;
+  color-scheme: dark;
 }
 
 * {
@@ -27,6 +39,7 @@ body {
   background: var(--bg);
   color: var(--ink);
   line-height: 1.7;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .page {
@@ -46,6 +59,31 @@ body {
   padding: 4rem 0;
   max-height: 100vh;
   overflow-y: auto;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--accent);
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  transform: rotate(15deg);
+}
+
+.sidebar {
+  position: relative;
 }
 
 h1 {
@@ -328,6 +366,10 @@ footer {
     position: static;
     max-height: none;
     padding: 3rem 0 0;
+  }
+
+  .theme-toggle {
+    top: 3rem;
   }
 
   .site-nav {

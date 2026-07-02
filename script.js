@@ -15,3 +15,21 @@ const observer = new IntersectionObserver(
 );
 
 sections.forEach((s) => observer.observe(s));
+
+// Theme toggle — the initial theme is applied by the inline script in <head>.
+const toggle = document.querySelector('.theme-toggle');
+const root = document.documentElement;
+
+function renderToggle() {
+  const dark = root.dataset.theme === 'dark';
+  toggle.textContent = dark ? '☀' : '☾';
+  toggle.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+}
+
+toggle.addEventListener('click', () => {
+  root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+  localStorage.setItem('theme', root.dataset.theme);
+  renderToggle();
+});
+
+renderToggle();

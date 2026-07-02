@@ -6,6 +6,12 @@
   <meta name="description" content="Amirhesam Badeanlou — Data Scientist & Engineer in Milan. Machine learning, Python, and geospatial data for urban mobility.">
   <title>Amirhesam Badeanlou — Data Scientist &amp; Engineer</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%238a6d3b'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' fill='%23faf8f5' text-anchor='middle'%3EAB%3C/text%3E%3C/svg%3E">
+  <script>
+    // Apply saved or system theme before first paint to avoid a flash.
+    document.documentElement.dataset.theme =
+      localStorage.getItem('theme') ||
+      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  </script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,6 +19,7 @@
 
     <aside class="sidebar">
       <div class="sidebar-inner">
+        <button class="theme-toggle" type="button" aria-label="Switch theme">☾</button>
         <h1>Amirhesam<br>Badeanlou</h1>
         <p class="tagline">Data Scientist &amp; Engineer</p>
         <p class="tagline-sub">ML, Python &amp; Geospatial Data</p>

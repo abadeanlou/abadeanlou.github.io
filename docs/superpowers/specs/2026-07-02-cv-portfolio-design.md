@@ -30,6 +30,14 @@ CV and portfolio, sourced from the CV PDF (kept private, gitignored).
 - `index.html` + `style.css` + small `script.js` (scroll-spy only; site works
   without JS). No frameworks, no build step. Push to main = deploy.
 
+## Dark mode (added same day, user-approved)
+- Follows visitor's OS preference by default; sun/moon toggle button in the
+  sidebar overrides it; choice persists in `localStorage`
+- Warm dark palette: bg `#201d19`, card `#2a2622`, ink `#e8e2d9`,
+  accent `#c9a05e`, border `#3a352e`
+- Inline `<head>` script applies theme before first paint (no flash);
+  all theming via CSS variables under `[data-theme="dark"]`
+
 ## Verification
 - Local browser check at desktop and mobile widths before pushing
 - Confirm live URL serves the new version after push
