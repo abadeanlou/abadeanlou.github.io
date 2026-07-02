@@ -12,18 +12,22 @@
       localStorage.getItem('theme') ||
       (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   </script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
   <div class="page">
 
     <aside class="sidebar">
       <div class="sidebar-inner">
-        <button class="theme-toggle" type="button" aria-label="Switch theme">☾</button>
         <h1>Amirhesam<br>Badeanlou</h1>
         <p class="tagline">Data Scientist &amp; Engineer</p>
         <p class="tagline-sub">ML, Python &amp; Geospatial Data</p>
         <p class="location">Milan, Italy</p>
+
+        <div class="theme-switch" role="group" aria-label="Color theme">
+          <button type="button" class="seg-light" aria-pressed="true">Light</button>
+          <button type="button" class="seg-dark" aria-pressed="false">Dark</button>
+        </div>
 
         <nav class="site-nav" aria-label="Section navigation">
           <a href="#about" class="nav-link">About</a>
@@ -217,6 +221,6 @@
     </main>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>

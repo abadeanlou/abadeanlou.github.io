@@ -16,20 +16,26 @@ const observer = new IntersectionObserver(
 
 sections.forEach((s) => observer.observe(s));
 
-// Theme toggle — the initial theme is applied by the inline script in <head>.
-const toggle = document.querySelector('.theme-toggle');
+// Theme switch — the initial theme is applied by the inline script in <head>.
 const root = document.documentElement;
+const lightBtn = document.querySelector('.theme-switch .seg-light');
+const darkBtn = document.querySelector('.theme-switch .seg-dark');
 
-function renderToggle() {
+function renderSwitch() {
   const dark = root.dataset.theme === 'dark';
-  toggle.textContent = dark ? '☀' : '☾';
-  toggle.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+  lightBtn.classList.toggle('on', !dark);
+  darkBtn.classList.toggle('on', dark);
+  lightBtn.setAttribute('aria-pressed', String(!dark));
+  darkBtn.setAttribute('aria-pressed', String(dark));
 }
 
-toggle.addEventListener('click', () => {
-  root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
-  localStorage.setItem('theme', root.dataset.theme);
-  renderToggle();
-});
+lightBtn.addEventListener('click', () => setTheme('light'));
+darkBtn.addEventListener('click', () => setTheme('dark'));
 
-renderToggle();
+function setTheme(theme) {
+  root.dataset.theme = theme;
+  localStorage.setItem('theme', theme);
+  renderSwitch();
+}
+
+renderSwitch();

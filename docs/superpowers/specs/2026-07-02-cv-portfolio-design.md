@@ -31,8 +31,10 @@ CV and portfolio, sourced from the CV PDF (kept private, gitignored).
   without JS). No frameworks, no build step. Push to main = deploy.
 
 ## Dark mode (added same day, user-approved)
-- Follows visitor's OS preference by default; sun/moon toggle button in the
-  sidebar overrides it; choice persists in `localStorage`
+- Follows visitor's OS preference by default; segmented Light | Dark control
+  in the sidebar (user chose from 4 demoed variants) overrides it; choice
+  persists in `localStorage`. Asset URLs carry `?v=N` to bust the 10-minute
+  GitHub Pages cache on deploys.
 - Warm dark palette: bg `#201d19`, card `#2a2622`, ink `#e8e2d9`,
   accent `#c9a05e`, border `#3a352e`
 - Inline `<head>` script applies theme before first paint (no flash);
