@@ -345,27 +345,13 @@ h3 {
 
 /* Certifications */
 
-.certs-title {
-  font-family: var(--sans);
-  font-size: 0.72rem;
-  font-weight: normal;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-top: 2rem;
-  border-top: 1px dashed var(--border);
-  padding-top: 1.5rem;
-}
-
 .certs {
   list-style: none;
-  margin-top: 0.75rem;
 }
 
 .certs li {
   font-size: 0.95rem;
-  margin-bottom: 0.4rem;
-  color: var(--muted);
+  margin-bottom: 0.5rem;
 }
 
 .certs a {
