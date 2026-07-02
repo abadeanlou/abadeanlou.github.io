@@ -8,3 +8,5 @@ ABa_CV_Data.pdf
 # Local verification artifacts
 .playwright-mcp/
 *.png
+# ...except the published social sharing card
+!social-card.png

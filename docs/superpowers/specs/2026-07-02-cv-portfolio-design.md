@@ -40,6 +40,19 @@ CV and portfolio, sourced from the CV PDF (kept private, gitignored).
 - Inline `<head>` script applies theme before first paint (no flash);
   all theming via CSS variables under `[data-theme="dark"]`
 
+## Round 3 additions (added same day, user-approved)
+- **Social/SEO**: OG + Twitter-card meta, canonical URL, generated 1200×630
+  `social-card.png` (editorial style), JSON-LD Person schema
+- **Print stylesheet**: `@media print` — forced light palette, one column,
+  nav/theme-switch/map hidden, link URLs printed for publications and socials
+- **Certifications** subsection under Education & Honors; Coursera items link
+  to public verification pages (Google Drive cert links deliberately excluded)
+- **Journey map**: MapLibre GL 5.24.0 (unpkg CDN, SRI-pinned) + OpenFreeMap
+  `positron` (keyless) in About; bronze markers Tehran→Turin→Paris→Milan→Abu
+  Dhabi with dashed journey line and popups; scroll-zoom off; frame hidden via
+  `.map-frame:not(.map-ready)` when JS/CDN unavailable; light map kept in dark
+  theme (framed-print look). No TomTom, no keys, no client data.
+
 ## Verification
 - Local browser check at desktop and mobile widths before pushing
 - Confirm live URL serves the new version after push

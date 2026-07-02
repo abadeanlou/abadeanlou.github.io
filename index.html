@@ -5,6 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Amirhesam Badeanlou — Data Scientist & Engineer in Milan. Machine learning, Python, and geospatial data for urban mobility.">
   <title>Amirhesam Badeanlou — Data Scientist &amp; Engineer</title>
+  <link rel="canonical" href="https://abadeanlou.github.io/">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Amirhesam Badeanlou — Data Scientist &amp; Engineer">
+  <meta property="og:description" content="Machine learning, Python, and geospatial data for urban mobility. Based in Milan.">
+  <meta property="og:url" content="https://abadeanlou.github.io/">
+  <meta property="og:image" content="https://abadeanlou.github.io/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Amirhesam Badeanlou — Data Scientist &amp; Engineer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Amirhesam Badeanlou — Data Scientist &amp; Engineer">
+  <meta name="twitter:description" content="Machine learning, Python, and geospatial data for urban mobility. Based in Milan.">
+  <meta name="twitter:image" content="https://abadeanlou.github.io/social-card.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Amirhesam Badeanlou",
+    "jobTitle": "Data Scientist & Engineer",
+    "worksFor": { "@type": "Organization", "name": "CitiEU" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Milan", "addressCountry": "IT" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Politecnico di Torino" },
+      { "@type": "CollegeOrUniversity", "name": "Sharif University of Technology" }
+    ],
+    "url": "https://abadeanlou.github.io/",
+    "sameAs": [
+      "https://github.com/abadeanlou",
+      "https://www.linkedin.com/in/abadeanlou/",
+      "https://scholar.google.com/citations?hl=en&user=wJTLpQIAAAAJ"
+    ]
+  }
+  </script>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%238a6d3b'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' fill='%23faf8f5' text-anchor='middle'%3EAB%3C/text%3E%3C/svg%3E">
   <script>
     // Apply saved or system theme before first paint to avoid a flash.
@@ -12,14 +47,16 @@
       localStorage.getItem('theme') ||
       (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   </script>
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css"
+        integrity="sha384-uTttxo/aOKbdE5RlD/SPzSDoDmNvGlUYPjONi2MN/b7c9HPSvW07OIuyP7uL6jxK" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
   <div class="page">
 
     <aside class="sidebar">
       <div class="sidebar-inner">
-        <h1>Amirhesam<br>Badeanlou</h1>
+        <h1>Amirhesam <br>Badeanlou</h1>
         <p class="tagline">Data Scientist &amp; Engineer</p>
         <p class="tagline-sub">ML, Python &amp; Geospatial Data</p>
         <p class="location">Milan, Italy</p>
@@ -63,6 +100,11 @@
           Before that, I did research at Institut Polytechnique de Paris on public
           transit equity, published as first author at hEART 2022 and TRB 2023.
         </p>
+
+        <div class="map-frame">
+          <div id="journey-map" role="img" aria-label="Map of the cities where I have studied, researched, and worked"></div>
+          <p class="map-caption">The journey so far — Tehran → Turin → Paris → Milan → Abu Dhabi. Click a marker.</p>
+        </div>
       </section>
 
       <section id="experience">
@@ -212,6 +254,15 @@
           <li><strong>Research grants</strong> — funding secured from three independent sources for the Paris-based master's thesis.</li>
           <li><strong>Conference presentation</strong> — presented first-author work at hEART 2022.</li>
         </ul>
+
+        <h3 class="certs-title">Certifications</h3>
+        <ul class="certs">
+          <li><a href="https://www.coursera.org/account/accomplishments/specialization/A2K8R7UR4C8W" target="_blank" rel="noopener">Machine Learning Specialization</a> · Coursera</li>
+          <li><a href="https://www.coursera.org/account/accomplishments/professional-cert/JC6BYH6BKVP2" target="_blank" rel="noopener">Google Data Analytics</a> · Coursera</li>
+          <li>Advanced Cube Voyager Scripting</li>
+          <li>Aimsun Core Skills</li>
+          <li>Introduction to LEGION</li>
+        </ul>
       </section>
 
       <footer>
@@ -221,6 +272,8 @@
     </main>
   </div>
 
-  <script src="script.js?v=2"></script>
+  <script defer src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"
+          integrity="sha384-5+cfbwT0iiub6VsQAdn6yz16nr6sDiQoHx6tm4O8OVYXHYOxcffFmCJBL0dgdvGp" crossorigin="anonymous"></script>
+  <script defer src="script.js?v=3"></script>
 </body>
 </html>

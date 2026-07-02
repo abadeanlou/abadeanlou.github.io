@@ -196,6 +196,51 @@ h3 {
   margin-top: 1rem;
 }
 
+/* Journey map */
+
+.map-frame {
+  margin-top: 1.75rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--card);
+}
+
+#journey-map {
+  height: 320px;
+}
+
+/* Collapse the frame if the map never initializes (JS off, CDN blocked) */
+.map-frame:not(.map-ready) {
+  display: none;
+}
+
+.map-caption {
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  color: var(--faint);
+  padding: 0.55rem 0.9rem;
+  border-top: 1px solid var(--border);
+}
+
+.journey-marker {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.maplibregl-popup-content {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: #2b2b2b;
+  padding: 0.6rem 0.8rem;
+}
+
 /* Experience */
 
 .job {
@@ -343,6 +388,42 @@ h3 {
   color: var(--accent);
 }
 
+/* Certifications */
+
+.certs-title {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: normal;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 2rem;
+  border-top: 1px dashed var(--border);
+  padding-top: 1.5rem;
+}
+
+.certs {
+  list-style: none;
+  margin-top: 0.75rem;
+}
+
+.certs li {
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+  color: var(--muted);
+}
+
+.certs a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 1px;
+}
+
+.certs a:hover {
+  color: var(--accent);
+}
+
 /* Footer */
 
 footer {
@@ -387,5 +468,102 @@ footer {
 
   section {
     margin-bottom: 3rem;
+  }
+}
+
+/* ---------- Print ---------- */
+
+@media print {
+  :root,
+  [data-theme="dark"] {
+    --bg: #ffffff;
+    --card: #ffffff;
+    --ink: #000000;
+    --muted: #333333;
+    --faint: #555555;
+    --accent: #000000;
+    --border: #bbbbbb;
+  }
+
+  body {
+    background: #ffffff;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  .theme-switch,
+  .site-nav,
+  .map-frame,
+  footer {
+    display: none !important;
+  }
+
+  .page {
+    display: block;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .sidebar-inner {
+    position: static;
+    max-height: none;
+    padding: 0 0 0.75rem;
+    border-bottom: 2px solid #000;
+    margin-bottom: 1.25rem;
+    overflow: visible;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  h1 br {
+    display: none;
+  }
+
+  .content {
+    padding: 0;
+  }
+
+  section {
+    margin-bottom: 1.75rem;
+  }
+
+  .job,
+  .publication,
+  .project,
+  .edu,
+  .skill-group {
+    break-inside: avoid;
+  }
+
+  .publication h3 a::after {
+    content: " — " attr(href);
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 0.7rem;
+    color: #333;
+    border: none;
+  }
+
+  .social a::after {
+    content: " (" attr(href) ")";
+    font-size: 0.7rem;
+    color: #555;
+  }
+
+  .social {
+    gap: 0.5rem 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project {
+    border: none;
+    padding: 0 0 0.5rem;
+  }
+
+  .tags span,
+  .skill-group dd span {
+    border-color: #999;
   }
 }
