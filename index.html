@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Amirhesam Badeanlou — Data Scientist & Engineer in Milan. Machine learning, Python, and geospatial data for urban mobility.">
-  <title>Amirhesam Badeanlou — Data Scientist &amp; Engineer</title>
+  <meta name="description" content="Amirhesam Badeanlou — AI & Data Engineer in Milan. Production machine learning, real-time data pipelines, and geospatial systems for urban mobility.">
+  <title>Amirhesam Badeanlou — AI &amp; Data Engineer</title>
   <link rel="canonical" href="https://abadeanlou.github.io/">
 
   <meta property="og:type" content="profile">
-  <meta property="og:title" content="Amirhesam Badeanlou — Data Scientist &amp; Engineer">
-  <meta property="og:description" content="Machine learning, Python, and geospatial data for urban mobility. Based in Milan.">
+  <meta property="og:title" content="Amirhesam Badeanlou — AI &amp; Data Engineer">
+  <meta property="og:description" content="Production machine learning, real-time data pipelines, and geospatial systems for urban mobility. Based in Milan.">
   <meta property="og:url" content="https://abadeanlou.github.io/">
   <meta property="og:image" content="https://abadeanlou.github.io/social-card.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Amirhesam Badeanlou — Data Scientist &amp; Engineer">
+  <meta property="og:image:alt" content="Amirhesam Badeanlou — AI &amp; Data Engineer">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Amirhesam Badeanlou — Data Scientist &amp; Engineer">
-  <meta name="twitter:description" content="Machine learning, Python, and geospatial data for urban mobility. Based in Milan.">
+  <meta name="twitter:title" content="Amirhesam Badeanlou — AI &amp; Data Engineer">
+  <meta name="twitter:description" content="Production machine learning, real-time data pipelines, and geospatial systems for urban mobility. Based in Milan.">
   <meta name="twitter:image" content="https://abadeanlou.github.io/social-card.png">
 
   <script type="application/ld+json">
@@ -25,7 +25,7 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Amirhesam Badeanlou",
-    "jobTitle": "Data Scientist & Engineer",
+    "jobTitle": "AI & Data Engineer",
     "worksFor": { "@type": "Organization", "name": "CitiEU" },
     "address": { "@type": "PostalAddress", "addressLocality": "Milan", "addressCountry": "IT" },
     "alumniOf": [
@@ -55,8 +55,8 @@
     <aside class="sidebar">
       <div class="sidebar-inner">
         <h1>Amirhesam <br>Badeanlou</h1>
-        <p class="tagline">Data Scientist &amp; Engineer</p>
-        <p class="tagline-sub">ML, Python &amp; Geospatial Data</p>
+        <p class="tagline">AI &amp; Data Engineer</p>
+        <p class="tagline-sub">Machine learning systems · Data pipelines · Geospatial</p>
         <p class="location">Milan, Italy</p>
 
         <div class="theme-switch" role="group" aria-label="Color theme">
@@ -89,15 +89,16 @@
       <section id="about">
         <h2>About</h2>
         <p>
-          I'm a data scientist and engineer based in Milan, working where machine
-          learning, geospatial data, and urban mobility meet. At CitiEU I design and
-          build data platforms that turn city-scale movement data into models, maps,
-          and decisions &mdash; from real-time traffic ingestion and ML travel-time
-          inference to the transport models behind them.
+          I build production machine-learning and data systems: forecasting models,
+          real-time pipelines, and the cloud platforms that run them. At CitiEU in
+          Milan I built and operate a traffic-forecasting platform end to end &mdash;
+          a LightGBM system predicting travel times up to 4 hours ahead, a real-time
+          ingestion layer processing ~27M rows/day into TimescaleDB, and LLM-generated
+          reporting &mdash; deployed on GCP with CI/CD.
         </p>
         <p>
-          Before that, I did research at Institut Polytechnique de Paris on public
-          transit equity, published as first author at hEART 2022 and TRB 2023.
+          Before that, I researched public transit equity at Institut Polytechnique
+          de Paris, published as first author at hEART 2022 and TRB 2023.
         </p>
       </section>
 
@@ -110,24 +111,29 @@
             <p class="job-meta">CitiEU — CitiME · Milan, Italy · <span class="dates">Mar 2023 – Present</span></p>
           </header>
           <ul>
-            <li>Designed and built <strong>IntelligentMobilityHub</strong>, an internal route-monitoring
-              platform: Express.js backend, FastAPI/LightGBM ML inference sidecar, PostgreSQL with
-              monthly time-series partitioning, MapLibre GL frontend, and Anthropic API integration
-              for AI-generated traffic reports.</li>
-            <li>Architected its real-time ingestion layer, pulling TomTom MOVE traffic and incident
-              feeds into PostgreSQL via REST APIs and sustaining continuous high-volume capture
-              across multiple enterprise clients.</li>
-            <li>Built Python automation for ETL, model execution, and CubeConvert-driven
-              SQLite/GDB/NET conversions, replacing previously manual steps in the client
-              model-delivery workflow.</li>
-            <li>Developed a bash orchestration framework running multi-agent audit pipelines
-              (Claude + Codex) across 8+ domain roles per script for code review, UI/UX,
-              performance, and feature audits.</li>
-            <li>Ported legacy Voyager transport-modelling scripts to CubePy and rebuilt the
-              surrounding Python automation, cutting end-to-end model runtime by <strong>40%</strong> on
-              the Abu Dhabi Mobility model and clearing an ArcGIS Engine deprecation blocker.</li>
-            <li>Delivered training to <strong>50+ modellers</strong> across the client's modelling group on
-              the migrated stack, with architecture docs, user guides, and methodology reports.</li>
+            <li>Designed and operate a <strong>hybrid ML forecasting system</strong> &mdash; a global
+              LightGBM model trained on pooled route history (~1.5&ndash;3M observations) blended
+              with per-route specialist models by recent accuracy &mdash; predicting route travel
+              times 15 min to 4 h ahead: <strong>~1.7 min MAE</strong> at 15-minute lead,
+              <strong>16&ndash;50% better</strong> than a typical-day baseline, with quantile +
+              conformal-calibrated P15&ndash;P85 uncertainty bands (~80&ndash;85% empirical coverage).</li>
+            <li>Own the full <strong>ML lifecycle in production</strong>: nightly automated retraining,
+              every forecast graded continuously against actuals per route, lead time, and model
+              variant, and cold-start handling for new routes through the global model.</li>
+            <li>Built the platform's <strong>real-time ingestion layer</strong>: ~27M rows/day of
+              per-minute traffic telemetry into PostgreSQL/TimescaleDB &mdash; hypertables with
+              columnar compression (371 GB logical stored in 137 GB) and continuous aggregates
+              that keep month-scale analytics off the raw data.</li>
+            <li>Run three <strong>GCP environments</strong> (production, staging, delivery) with
+              GitHub Actions CI/CD: health-gated auto-deploys, PR tests against a real TimescaleDB
+              service container (~75 Node test files), Secret Manager for all credentials, and
+              idempotent SQL migrations on every deploy.</li>
+            <li>Integrated the <strong>Anthropic API</strong> for AI-generated traffic incident and
+              trend reports, and built a bash multi-agent audit framework (Claude + Codex) running
+              8+ specialised review roles per script for code, UI/UX, and performance audits.</li>
+            <li>Migrated a legacy Cube Voyager transport model to CubePy, cutting end-to-end
+              runtime by <strong>40%</strong> on the Abu Dhabi Mobility model, and trained
+              <strong>50+ modellers</strong> on the new stack.</li>
           </ul>
         </article>
 
@@ -151,11 +157,13 @@
         <div class="project-grid">
           <article class="project">
             <h3>IntelligentMobilityHub</h3>
-            <p class="project-org">Full-stack route monitoring · CitiEU</p>
-            <p>Vanilla-JS SPA and Express.js API with a FastAPI/LightGBM sidecar for travel-time
-              inference. Real-time TomTom MOVE ingestion into partitioned PostgreSQL, MapLibre GL
-              live route and incident layers, and Anthropic-API-generated incident and trend reports.</p>
-            <p class="tags"><span>Node.js</span><span>FastAPI</span><span>LightGBM</span><span>PostgreSQL</span><span>MapLibre GL</span></p>
+            <p class="project-org">Production ML &amp; data platform · CitiEU</p>
+            <p>Traffic-forecasting platform run in production: per-minute telemetry (~27M rows/day)
+              ingested into TimescaleDB, a FastAPI/LightGBM service forecasting travel times up to
+              4 h ahead with calibrated uncertainty bands, MapLibre GL live map, and
+              Anthropic-API-generated reports &mdash; deployed on GCP with health-gated
+              GitHub Actions CI/CD.</p>
+            <p class="tags"><span>LightGBM</span><span>TimescaleDB</span><span>FastAPI</span><span>GCP</span><span>GitHub Actions</span></p>
           </article>
 
           <article class="project">
@@ -203,28 +211,28 @@
 
         <dl class="skills">
           <div class="skill-group">
-            <dt>Programming &amp; Data</dt>
-            <dd><span>Python</span><span>pandas</span><span>NumPy</span><span>GeoPandas</span><span>SQL</span><span>JavaScript</span><span>Node.js</span><span>Bash</span></dd>
-          </div>
-          <div class="skill-group">
             <dt>Machine Learning &amp; AI</dt>
-            <dd><span>LightGBM</span><span>Feature engineering</span><span>Model evaluation</span><span>Anthropic API</span><span>Claude Code / MCP</span></dd>
+            <dd><span>LightGBM</span><span>Quantile regression</span><span>Conformal calibration</span><span>Feature engineering</span><span>Model monitoring</span><span>Anthropic API</span><span>Claude Code / MCP</span></dd>
           </div>
           <div class="skill-group">
-            <dt>Data Pipelines</dt>
-            <dd><span>REST APIs</span><span>Real-time ingestion</span><span>ETL/ELT</span><span>Async processing</span></dd>
+            <dt>Data Engineering</dt>
+            <dd><span>PostgreSQL</span><span>TimescaleDB</span><span>Real-time ingestion</span><span>ETL/ELT</span><span>REST APIs</span><span>MongoDB</span><span>SQLite</span></dd>
           </div>
           <div class="skill-group">
-            <dt>Databases</dt>
-            <dd><span>PostgreSQL</span><span>MongoDB</span><span>SQLite</span><span>SQL Server</span></dd>
+            <dt>Cloud &amp; DevOps</dt>
+            <dd><span>GCP Compute Engine</span><span>Secret Manager</span><span>BigQuery</span><span>GitHub Actions CI/CD</span><span>pm2</span><span>Bash</span></dd>
+          </div>
+          <div class="skill-group">
+            <dt>Programming</dt>
+            <dd><span>Python</span><span>pandas</span><span>NumPy</span><span>GeoPandas</span><span>SQL</span><span>JavaScript</span><span>Node.js</span><span>FastAPI</span></dd>
           </div>
           <div class="skill-group">
             <dt>Geospatial &amp; Visualisation</dt>
             <dd><span>MapLibre GL</span><span>QGIS</span><span>ArcGIS</span><span>GTFS</span><span>Dashboards</span></dd>
           </div>
           <div class="skill-group">
-            <dt>Transport Modelling</dt>
-            <dd><span>OpenPaths CUBE</span><span>CubePy</span><span>Aimsun</span><span>LEGION</span><span>Four-step modelling</span></dd>
+            <dt>Transport Modelling (domain)</dt>
+            <dd><span>OpenPaths CUBE</span><span>CubePy</span><span>Aimsun</span><span>Four-step modelling</span></dd>
           </div>
         </dl>
       </section>
