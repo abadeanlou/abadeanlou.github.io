@@ -271,6 +271,13 @@ h3 {
   background: var(--bg);
 }
 
+.project-org a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 1px;
+}
+
 /* Publications */
 
 .publication {

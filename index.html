@@ -47,7 +47,7 @@
       localStorage.getItem('theme') ||
       (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   </script>
-  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
   <div class="page">
@@ -164,6 +164,17 @@
               Anthropic-API-generated reports &mdash; deployed on GCP with health-gated
               GitHub Actions CI/CD.</p>
             <p class="tags"><span>LightGBM</span><span>TimescaleDB</span><span>FastAPI</span><span>GCP</span><span>GitHub Actions</span></p>
+          </article>
+
+          <article class="project">
+            <h3>bikeflow</h3>
+            <p class="project-org">Personal project · <a href="https://abadeanlou.com/bikeflow/" target="_blank" rel="noopener">live dashboard →</a></p>
+            <p>Open, end-to-end data pipeline collecting real-time bike-share availability
+              for Milan and Paris (GBFS): Dockerized collector on a GCP VM, Airflow 3
+              orchestration (compaction, GCS backups, freshness alarms), CI, and an
+              hourly-published public dashboard. Built as the open counterpart to my
+              production work &mdash; LightGBM forecasting layer in progress.</p>
+            <p class="tags"><span>Airflow</span><span>Docker</span><span>GCP</span><span>Parquet</span><span>GitHub Actions</span></p>
           </article>
 
           <article class="project">
